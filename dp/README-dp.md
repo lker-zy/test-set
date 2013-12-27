@@ -5,7 +5,7 @@ Decorate Pattern
 
 类图
 ------------------------------
-![DesignPattern-Decorate](http://github.com/lker-zy/test-set/blob/master/images/decorate.png "DesignPattern-Decorate")
+![DesignPattern-Decorate](http://hi.csdn.net/attachment/201202/13/0_1329114268YYLk.gif "DesignPattern-Decorate")
 
 Example
 ------------------------------
