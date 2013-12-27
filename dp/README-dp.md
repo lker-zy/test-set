@@ -5,13 +5,13 @@ Decorate Pattern
 
 类图
 ------------------------------
-![DesignPattern-Decorate](http://github.com/lker-zy/decorate.png "DesignPattern-Decorate")
+![DesignPattern-Decorate](http://github.com/lker-zy/test-set/blob/master/images/decorate.png "DesignPattern-Decorate")
 
 Example
 ------------------------------
 ### C++
 
-		\#include <iostream>
+		#include <iostream>
 
 		using namespace std;
 
@@ -69,7 +69,7 @@ Example
 			}
 		};
 
-		\#define  unused(x) ((void)(x))
+		#define  unused(x) ((void)(x))
 		int main(int argc, char **argv) {
 			unused(argc);
 			unused(argv);
