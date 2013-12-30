@@ -34,13 +34,41 @@ def args_deco(name):
             return real_deco_2
     return lker_func_deco
 
+
+"""
+responsize decorate with variable params numbers 
+"""
+def log_decorate (func):
+    def exec_func(*args):
+
+        def arg_0():
+            return func()
+
+        def arg_m():
+            return func(*args)
+
+        # execution
+        print "@@@@@@  %s CALLED  @@@@@@" % func.__name__
+        '''
+        {0: arg_0, 1: arg_1, 2: arg_2}[len(args)]()
+        '''
+        wrapper_dict = {0: arg_0, 1: arg_m}
+        deffunc = lambda *arglist, **kw: None
+        wrapper_func = wrapper_dict.get(len(args) > 0, deffunc)
+        wrapper_func()
+        print "@@@@@@  %s RETURN  @@@@@@" % func.__name__
+
+    return exec_func
+
 @args_deco('deco_1')
 def ok(arg):
     print 'func ok with param:' + arg
 
+@log_decorate
 @args_deco('deco_2')
 def fail(arg):
     print 'func fail with param:' + arg
+
 
 def main():
     ok('such a happy day')
