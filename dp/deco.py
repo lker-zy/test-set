@@ -55,8 +55,9 @@ def log_decorate (func):
         wrapper_dict = {0: arg_0, 1: arg_m}
         deffunc = lambda *arglist, **kw: None
         wrapper_func = wrapper_dict.get(len(args) > 0, deffunc)
-        wrapper_func()
+        ret = wrapper_func()
         print "@@@@@@  %s RETURN  @@@@@@" % func.__name__
+        return ret
 
     return exec_func
 
